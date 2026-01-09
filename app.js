@@ -16,7 +16,7 @@ const server = http.createServer(app);
 // Initialize Socket.IO with proper CORS
 const io = require("socket.io")(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://chat.apiforapp.link",
     methods: ["GET", "POST"],
     credentials: true
   },
@@ -30,7 +30,7 @@ const io = require("socket.io")(server, {
 
 // Middlewares with proper CORS configuration
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://chat.apiforapp.link",
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
   credentials: true,
   optionsSuccessStatus: 200
